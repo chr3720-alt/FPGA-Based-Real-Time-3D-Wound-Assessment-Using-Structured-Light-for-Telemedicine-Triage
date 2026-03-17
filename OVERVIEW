@@ -1,0 +1,213 @@
+# 🩺 FPGA-Based Real-Time 3D Wound Assessment Using Structured Light for Telemedicine Triage
+
+## Overview
+
+**FPGA-Based Real-Time 3D Wound Assessment Using Structured Light for Telemedicine Triage** is an advanced **biomedical imaging and embedded systems** project designed for **non-contact wound measurement** and **remote clinical evaluation**.
+
+The system uses **laser-line structured light triangulation** to scan the wound surface and reconstruct a **3D wound profile** in real time. By projecting a laser line across the wound and capturing its deformation using a camera, the system can estimate important wound parameters such as **depth**, **surface area**, and **approximate volume** without direct physical contact.
+
+An **FPGA-accelerated processing pipeline** performs high-speed laser stripe extraction, noise filtering, geometric analysis, and 3D reconstruction, enabling low-latency performance suitable for **telemedicine triage**, **emergency response**, and **remote healthcare applications**.
+
+This project demonstrates how **FPGA acceleration, structured light imaging, computer vision, and telemedicine visualization** can be combined to build a **portable, intelligent, and clinically relevant wound assessment solution**.
+
+---
+
+## ❗ Problem Statement
+
+Accurate wound assessment is critical for:
+
+- Treatment planning  
+- Healing progression monitoring  
+- Infection risk evaluation  
+- Emergency triage and clinical prioritization  
+
+However, traditional wound measurement techniques are often:
+
+- Manual and time-consuming  
+- Contact-based and potentially unsafe for sensitive wounds  
+- Prone to subjective variation  
+- Difficult to standardize across clinicians  
+- Not ideal for remote or telemedicine-based assessment  
+
+This project addresses these limitations by providing a **real-time, non-contact, and hardware-accelerated 3D wound assessment system** for safer and more consistent clinical evaluation.
+
+---
+
+## 🎯 Project Objectives
+
+- Develop a **non-contact wound measurement system** using structured light.
+- Project and capture a **laser-line profile** over the wound surface.
+- Implement **FPGA-based real-time laser stripe extraction** and image processing.
+- Reconstruct the wound profile in **3D** using triangulation principles.
+- Estimate **wound depth, surface area, and approximate volume**.
+- Provide a **telemedicine-ready dashboard** for visualization and remote triage support.
+
+---
+
+## ⚙️ System Architecture
+
+### 1️⃣ Structured Light Projection Module
+
+A **laser line module** projects a thin laser stripe across the wound surface.  
+The shape of this stripe changes depending on the wound’s depth and surface topology.
+
+### 2️⃣ Image Acquisition Module
+
+A **camera or image sensor** captures the deformed laser stripe from a fixed viewing angle, producing the raw image data required for reconstruction.
+
+### 3️⃣ FPGA Processing Module
+
+The **FPGA** acts as the real-time processing engine and performs:
+
+- Laser stripe detection  
+- Noise filtering  
+- Thresholding / edge enhancement  
+- Stripe center extraction  
+- Geometric feature analysis  
+
+This enables **high-speed, low-latency processing** compared to software-only implementations.
+
+### 4️⃣ 3D Reconstruction Module
+
+Using **structured light triangulation**, the extracted laser profile is converted into a **3D representation of the wound surface**, allowing accurate geometric estimation.
+
+### 5️⃣ Measurement & Analysis Module
+
+From the reconstructed 3D wound profile, the system estimates:
+
+- **Wound depth**
+- **Surface area**
+- **Approximate wound volume**
+
+### 6️⃣ Telemedicine Dashboard
+
+A **Python / Streamlit-based dashboard** displays:
+
+- 2D wound image  
+- Extracted laser profile  
+- 3D wound surface map  
+- Estimated wound depth  
+- Measured wound area  
+- Approximate wound volume  
+- Remote triage support metrics  
+
+---
+
+## 🧰 Technologies Used
+
+### Programming
+
+- **Python**
+- **Verilog / VHDL** *(for FPGA logic)*
+- **Embedded C / C++** *(optional integration layer)*
+
+### Tools
+
+- **Streamlit** *(dashboard visualization)*
+- **OpenCV** *(image preprocessing / simulation)*
+- **MATLAB** *(optional signal and profile analysis)*
+
+### Hardware
+
+- **FPGA Development Board**
+- **Laser Line Module**
+- **Camera / Image Sensor**
+- **Host / Processing Interface**
+- **Display / Monitoring Device**
+
+### Core Concepts
+
+- **Structured Light Triangulation**
+- **3D Reconstruction**
+- **FPGA Acceleration**
+- **Computer Vision**
+- **Biomedical Imaging**
+- **Telemedicine Systems**
+
+---
+
+## 🔧 Hardware Components
+
+| Component | Purpose |
+|----------|---------|
+| FPGA Development Board | Real-time hardware-accelerated processing |
+| Laser Line Module | Structured light projection |
+| Camera / Image Sensor | Captures wound surface deformation |
+| Host / Processing Device | Dashboard visualization and system control |
+| Power Supply | System operation |
+| Display / Monitoring Interface | Output display and remote review |
+
+---
+
+## 🔄 System Workflow
+
+1. A **laser line** is projected across the wound surface.  
+2. The **camera** captures the distorted laser stripe caused by wound depth variations.  
+3. The image data is sent to the **FPGA processing pipeline**.  
+4. The FPGA performs **laser extraction, filtering, and feature detection**.  
+5. Using **triangulation**, the wound surface is reconstructed in **3D**.  
+6. The system calculates **depth, area, and approximate volume**.  
+7. Results are displayed on a **telemedicine dashboard** for remote clinical assessment.  
+
+---
+
+## 📊 Measurement & Visualization
+
+The system produces both **visual outputs** and **quantitative wound metrics** to support clinical decision-making.
+
+### Output Features
+
+- **Laser stripe extraction visualization**
+- **2D wound surface preview**
+- **3D wound topology / surface map**
+- **Estimated wound depth**
+- **Measured wound area**
+- **Approximate wound volume**
+- **Remote dashboard-based triage indicators**
+
+These outputs help clinicians perform **faster, safer, and more informed wound assessment** without direct physical contact.
+
+---
+
+## 🌍 Applications
+
+- **Telemedicine-based wound monitoring**
+- **Emergency and trauma triage**
+- **Burn wound assessment**
+- **Rural and remote healthcare support**
+- **Post-surgical wound follow-up**
+- **Diabetic ulcer monitoring**
+- **Non-contact biomedical imaging research**
+
+---
+
+## ✅ Advantages
+
+- **Non-contact and safer wound assessment**
+- **Real-time FPGA-accelerated processing**
+- **Portable and scalable system design**
+- **Reduced subjectivity compared to manual methods**
+- **Suitable for telemedicine and remote healthcare**
+- **Fast 3D geometric estimation of wound features**
+
+---
+
+## 🔭 Future Improvements
+
+- Integration with **AI-based wound classification**
+- Automated **wound severity prediction**
+- Healing progression tracking over time
+- Cloud-connected patient record integration
+- Mobile application for remote clinician access
+- Higher-resolution 3D surface reconstruction
+- Multi-wavelength or multispectral wound analysis
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates how **FPGA acceleration, structured light triangulation, 3D reconstruction, and telemedicine visualization** can be integrated to create a practical and impactful healthcare technology solution.
+
+By enabling **real-time, non-contact wound depth, area, and volume estimation**, the system provides a **safe, intelligent, and scalable approach to remote wound assessment**, making it highly relevant for **modern telemedicine, emergency care, and biomedical engineering applications**.
+
+---
