@@ -1,0 +1,36 @@
+## 📋 Requirements
+
+### 🖥️ Hardware
+- Intel Cyclone V FPGA Board  
+- USB Blaster (for FPGA programming)  
+- MQ-Series Gas Sensors (e.g., MQ-3, MQ-135) *(for future real-world testing)*  
+- Power Supply Module  
+- Breadboard & Connecting Wires  
+
+---
+
+### 💻 Software
+- Quartus Prime (FPGA design & synthesis)  
+- ModelSim (simulation & verification)  
+- MATLAB / Python *(optional, for PCA validation & dataset generation)*  
+
+---
+
+### 🧠 Technical Knowledge
+- Basic understanding of FPGA design (Verilog/VHDL)  
+- Digital Signal Processing concepts  
+- Principal Component Analysis (PCA)  
+- Fixed-point arithmetic implementation  
+
+---
+
+### 📊 Data Requirements
+- Synthetic or real VOC datasets (acetone, limonene levels)  
+- Predefined threshold values for classification  
+
+---
+
+### ⚙️ System Specifications
+- 8-channel sensor input support  
+- Fixed-point PCA computation  
+- Real-time processing at ~120 MHz  
