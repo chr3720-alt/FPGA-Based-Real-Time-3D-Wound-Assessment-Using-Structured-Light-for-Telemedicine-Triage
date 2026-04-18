@@ -1,0 +1,15 @@
+## 📌 Project Description
+
+This project implements an FPGA-based real-time breath analysis system for early Alzheimer’s Disease (AD) screening using volatile organic compound (VOC) signals. The design follows a modular architecture consisting of normalization, PCA-based feature extraction, and threshold-based classification.
+
+The system is developed and verified in a structured, phase-wise approach:
+
+- **Phase 1:** Environment setup using Quartus Prime and ModelSim  
+- **Phase 2:** Development of core hardware modules (Normalization, PCA Core, Classifier)  
+- **Phase 3:** Integration into a top-level FPGA design  
+- **Phase 4:** Functional verification using a testbench in ModelSim  
+- **Phase 5:** Progressive enhancement with real PCA weights and fixed-point optimization  
+
+A simplified PCA model is initially implemented using fixed weights to validate functionality. The system processes 8-channel input data and classifies outputs into “healthy” or “risk” based on computed features.
+
+The primary objective is to demonstrate a **low-latency, edge-computing hardware pipeline** suitable for non-invasive biomedical screening and future wearable deployment.
